@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary-dark: #1E3A8A;
+    --color-primary: #1E40AF;
+    --color-primary-light: #3B82F6;
+    --color-cta: #22C55E;
+    --color-bg-light: #EFF6FF;
+
+    --color-debate-bg: #0a0a0f;
+    --color-debate-card: rgba(17, 17, 24, 0.7);
+    --color-left: #f43f5e;
+    --color-neutral: #a78bfa;
+    --color-right: #38bdf8;
+    --color-judge: #fbbf24;
+}
+
+@layer base {
+    body {
+        @apply antialiased text-slate-800 bg-bg-light min-h-screen overflow-x-hidden;
+    }
+}
+
+/* Glassmorphism utilities */
+@layer utilities {
+    .glass {
+        @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+    }
+
+    .glass-dark {
+        @apply bg-debate-card backdrop-blur-xl border border-white/5;
+    }
+}
